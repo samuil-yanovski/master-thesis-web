@@ -1,5 +1,5 @@
-New log file opened at Sun Dec 20 14:19:09 EET 2015 by 9676@samuil-pc
-jvm 9676@samuil-pc
+New log file opened at Sun Dec 20 15:51:16 EET 2015 by 4940@samuil-pc
+jvm 4940@samuil-pc
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.25-b02
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in F:\workspace\master-thesis-web\project, returning: (master-thesis-web-build)
 Loading project definition from F:\workspace\master-thesis-web\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@3d528db4, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@499011af, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -65,9 +65,9 @@ Set current project to master-thesis-web (in build file:/F:/workspace/master-the
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-> {file:/F:/workspace/master-thesis-web/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@6ae5d98e, check cycles: false
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@5621b5c8, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -84,18 +84,12 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 1 s, completed Dec 20, 2015 2:19:13 PM
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/F:/workspace/master-thesis-web/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@369e0d3d, check cycles: false
-Total time: 0 s, completed Dec 20, 2015 2:19:13 PM
+Total time: 2 s, completed Dec 20, 2015 3:51:35 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/F:/workspace/master-thesis-web/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@40ec4ef8, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@5009a41b, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -112,12 +106,368 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 0 s, completed Dec 20, 2015 2:19:14 PM
+Total time: 1 s, completed Dec 20, 2015 3:51:36 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/F:/workspace/master-thesis-web/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@7a437a24, check cycles: false
-Total time: 0 s, completed Dec 20, 2015 2:19:14 PM
+Running task... Cancel: sbt.server.ServerTaskCancellation@75069435, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 3:51:36 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/F:/workspace/master-thesis-web/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@70cac208, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed Dec 20, 2015 3:51:37 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@141d8c77, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed Dec 20, 2015 3:53:13 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@2873bac4, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 3:53:16 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/F:/workspace/master-thesis-web/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@61c77029, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 3:53:19 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@4834f3e3, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 3:53:20 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/F:/workspace/master-thesis-web/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@1a6c7f18, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(F:\workspace\master-thesis-web\conf\application.conf,F:\workspace\master-thesis-web\target\scala-2.11\classes\application.conf)
+	(F:\workspace\master-thesis-web\conf\ebean.properties,F:\workspace\master-thesis-web\target\scala-2.11\classes\ebean.properties)
+	(F:\workspace\master-thesis-web\conf\evolutions,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions)
+	(F:\workspace\master-thesis-web\conf\routes,F:\workspace\master-thesis-web\target\scala-2.11\classes\routes)
+	(F:\workspace\master-thesis-web\conf\evolutions\default,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions\default)
+	(F:\workspace\master-thesis-web\conf\evolutions\default\1.sql,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions\default\1.sql)
+Total time: 1 s, completed Dec 20, 2015 3:54:59 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 1
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@44968c6, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 3:55:58 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@1a7d0ad4, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 3:56:55 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/F:/workspace/master-thesis-web/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@7760f0f6, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 3:56:57 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@13803f3b, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 3:56:58 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/F:/workspace/master-thesis-web/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@7b9fb1ea, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(F:\workspace\master-thesis-web\conf\application.conf,F:\workspace\master-thesis-web\target\scala-2.11\classes\application.conf)
+	(F:\workspace\master-thesis-web\conf\ebean.properties,F:\workspace\master-thesis-web\target\scala-2.11\classes\ebean.properties)
+	(F:\workspace\master-thesis-web\conf\evolutions,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions)
+	(F:\workspace\master-thesis-web\conf\routes,F:\workspace\master-thesis-web\target\scala-2.11\classes\routes)
+	(F:\workspace\master-thesis-web\conf\evolutions\default,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions\default)
+	(F:\workspace\master-thesis-web\conf\evolutions\default\1.sql,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions\default\1.sql)
+Total time: 0 s, completed Dec 20, 2015 4:01:12 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 2
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@2f14e4c9, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:03:08 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@4e6f692c, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:03:21 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/F:/workspace/master-thesis-web/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@35f59f85, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:03:23 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@705fa481, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:03:23 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/F:/workspace/master-thesis-web/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@42c1b543, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(F:\workspace\master-thesis-web\conf\application.conf,F:\workspace\master-thesis-web\target\scala-2.11\classes\application.conf)
+	(F:\workspace\master-thesis-web\conf\ebean.properties,F:\workspace\master-thesis-web\target\scala-2.11\classes\ebean.properties)
+	(F:\workspace\master-thesis-web\conf\evolutions,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions)
+	(F:\workspace\master-thesis-web\conf\routes,F:\workspace\master-thesis-web\target\scala-2.11\classes\routes)
+	(F:\workspace\master-thesis-web\conf\evolutions\default,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions\default)
+	(F:\workspace\master-thesis-web\conf\evolutions\default\1.sql,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions\default\1.sql)
+Total time: 0 s, completed Dec 20, 2015 4:03:39 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 3
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@1c9ca05e, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:03:49 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@5288a52a, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:04:19 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/F:/workspace/master-thesis-web/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@3fce91f5, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:04:21 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@7f7d750d, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:04:21 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/F:/workspace/master-thesis-web/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@51b35e47, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(F:\workspace\master-thesis-web\conf\application.conf,F:\workspace\master-thesis-web\target\scala-2.11\classes\application.conf)
+	(F:\workspace\master-thesis-web\conf\ebean.properties,F:\workspace\master-thesis-web\target\scala-2.11\classes\ebean.properties)
+	(F:\workspace\master-thesis-web\conf\evolutions,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions)
+	(F:\workspace\master-thesis-web\conf\routes,F:\workspace\master-thesis-web\target\scala-2.11\classes\routes)
+	(F:\workspace\master-thesis-web\conf\evolutions\default,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions\default)
+	(F:\workspace\master-thesis-web\conf\evolutions\default\1.sql,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions\default\1.sql)
+Total time: 0 s, completed Dec 20, 2015 4:04:29 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 4
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@3ad30420, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:04:38 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@4873c6d, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:05:23 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/F:/workspace/master-thesis-web/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@7d08364f, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:05:25 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@4885d36, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:05:26 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/F:/workspace/master-thesis-web/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@3b12fb4d, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(F:\workspace\master-thesis-web\conf\application.conf,F:\workspace\master-thesis-web\target\scala-2.11\classes\application.conf)
+	(F:\workspace\master-thesis-web\conf\ebean.properties,F:\workspace\master-thesis-web\target\scala-2.11\classes\ebean.properties)
+	(F:\workspace\master-thesis-web\conf\evolutions,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions)
+	(F:\workspace\master-thesis-web\conf\routes,F:\workspace\master-thesis-web\target\scala-2.11\classes\routes)
+	(F:\workspace\master-thesis-web\conf\evolutions\default,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions\default)
+	(F:\workspace\master-thesis-web\conf\evolutions\default\1.sql,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions\default\1.sql)
+Total time: 0 s, completed Dec 20, 2015 4:05:30 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 5
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@3e4c7fe3, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:32:14 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@362af04e, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:32:22 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/F:/workspace/master-thesis-web/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@1fed72d2, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:32:25 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@353ec5d2, check cycles: false
+Total time: 0 s, completed Dec 20, 2015 4:32:25 PM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/F:/workspace/master-thesis-web/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@43fe49f5, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(F:\workspace\master-thesis-web\conf\application.conf,F:\workspace\master-thesis-web\target\scala-2.11\classes\application.conf)
+	(F:\workspace\master-thesis-web\conf\ebean.properties,F:\workspace\master-thesis-web\target\scala-2.11\classes\ebean.properties)
+	(F:\workspace\master-thesis-web\conf\evolutions,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions)
+	(F:\workspace\master-thesis-web\conf\routes,F:\workspace\master-thesis-web\target\scala-2.11\classes\routes)
+	(F:\workspace\master-thesis-web\conf\evolutions\default,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions\default)
+	(F:\workspace\master-thesis-web\conf\evolutions\default\1.sql,F:\workspace\master-thesis-web\target\scala-2.11\classes\evolutions\default\1.sql)
+Total time: 0 s, completed Dec 20, 2015 4:33:07 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
