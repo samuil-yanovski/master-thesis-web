@@ -1,0 +1,10 @@
+New log file opened at Sun Dec 20 14:19:09 EET 2015 by 9676@samuil-pc
+Taking next connection to: 62818
+New client attempting to connect on port: 62819-62818
+  Address = /192.168.1.122:62818
+This client on port 62819 has uuid 3c7c4ee8-e9b1-4b9c-b8bb-7b07e42ed3e5 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-3c7c4ee8-e9b1-4b9c-b8bb-7b07e42ed3e5
+Taking next connection to: 62818
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 62818
