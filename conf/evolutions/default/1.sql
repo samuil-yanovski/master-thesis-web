@@ -78,6 +78,15 @@ create table thesis (
   constraint pk_thesis primary key (key))
 ;
 
+create table token (
+  key                       bigint not null,
+  auth                      varchar(255),
+  refresh                   varchar(255),
+  expiration_date           timestamp,
+  owner_key                 bigint,
+  constraint pk_token primary key (key))
+;
+
 
 create table credentials_event (
   credentials_key                bigint not null,
@@ -108,6 +117,8 @@ create sequence teacher_seq;
 
 create sequence thesis_seq;
 
+create sequence token_seq;
+
 alter table device add constraint fk_device_owner_1 foreign key (owner_key) references credentials (key);
 create index ix_device_owner_1 on device (owner_key);
 alter table student add constraint fk_student_contacts_2 foreign key (contacts_key) references contacts (key);
@@ -126,6 +137,8 @@ alter table thesis add constraint fk_thesis_author_8 foreign key (author_key) re
 create index ix_thesis_author_8 on thesis (author_key);
 alter table thesis add constraint fk_thesis_graduate_9 foreign key (graduate_key) references student (key);
 create index ix_thesis_graduate_9 on thesis (graduate_key);
+alter table token add constraint fk_token_owner_10 foreign key (owner_key) references credentials (key);
+create index ix_token_owner_10 on token (owner_key);
 
 
 
@@ -161,6 +174,8 @@ drop table if exists teacher cascade;
 
 drop table if exists thesis cascade;
 
+drop table if exists token cascade;
+
 drop sequence if exists category_seq;
 
 drop sequence if exists contacts_seq;
@@ -178,4 +193,6 @@ drop sequence if exists student_seq;
 drop sequence if exists teacher_seq;
 
 drop sequence if exists thesis_seq;
+
+drop sequence if exists token_seq;
 
