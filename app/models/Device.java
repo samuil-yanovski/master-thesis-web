@@ -30,6 +30,10 @@ public class Device extends Model implements BasicModel<Long> {
 	@OneToOne
 	private Credentials owner;
 	
+	public static Finder<Long,Device> find = new Finder<Long,Device>(
+        Long.class, Device.class
+    ); 
+	
 	public Long getKey() {
 		return key;
 	}

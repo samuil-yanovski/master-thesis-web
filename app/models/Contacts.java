@@ -21,6 +21,13 @@ public class Contacts extends Model implements BasicModel<Long> {
 	@Basic
 	private String phone;
 	
+	@Basic
+	private String email;
+	
+	public static Finder<Long,Contacts> find = new Finder<Long,Contacts>(
+        Long.class, Contacts.class
+    ); 
+	
 	public Long getKey() {
 		return key;
 	}
@@ -44,6 +51,14 @@ public class Contacts extends Model implements BasicModel<Long> {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override

@@ -36,6 +36,10 @@ public class Thesis extends Model implements BasicModel<Long> {
 	@OneToOne
 	private Student graduate;
 	
+	public static Finder<Long,Thesis> find = new Finder<Long,Thesis>(
+        Long.class, Thesis.class
+    ); 
+	
 	public Long getKey() {
 		return key;
 	}

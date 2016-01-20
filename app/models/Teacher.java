@@ -39,6 +39,10 @@ public class Teacher extends Model implements BasicModel<Long> {
 	@ManyToOne(cascade=CascadeType.ALL)
 	private List<Thesis> theses;
 	
+	public static Finder<Long,Teacher> find = new Finder<Long,Teacher>(
+        Long.class, Teacher.class
+    ); 
+	
 	public Long getKey() {
 		return key;
 	}

@@ -13,11 +13,21 @@ import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
 import play.utils.dao.BasicModel;
 
+import java.util.*;
+import javax.persistence.*;
+
+import play.db.ebean.*;
+import play.data.format.*;
+import play.data.validation.*;
+import play.data.format.*;
+
 @Entity
 @SuppressWarnings("serial")
 public class Event extends Model implements BasicModel<Long> {
 
 	@Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "task_gen")
+    @SequenceGenerator(name = "task_gen", sequenceName = "task_id_seq")
 	private Long key;
 
 	@Basic
@@ -26,10 +36,15 @@ public class Event extends Model implements BasicModel<Long> {
 	
 	@Basic
 	@Required
+	@Formats.DateTime(pattern="yyyy-MM-dd")
 	private DateTime date;
 	
 	@ManyToMany(cascade=CascadeType.ALL)
-    List<Credentials> members;
+    private List<Credentials> members;
+    
+    public static Finder<Long,Event> find = new Finder<Long,Event>(
+        Long.class, Event.class
+    ); 
 	
 	public Long getKey() {
 		return key;

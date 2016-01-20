@@ -27,6 +27,10 @@ public class Category extends Model implements BasicModel<Long> {
 	@ManyToOne(cascade=CascadeType.ALL)
 	private List<Thesis> theses;
 	
+	public static Finder<Long,Category> find = new Finder<Long,Category>(
+        Long.class, Category.class
+    ); 
+	
 	public Long getKey() {
 		return key;
 	}
