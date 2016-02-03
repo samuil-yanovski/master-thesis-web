@@ -8,14 +8,14 @@ import java.util.List;
 import play.libs.Json;
 import http.Response;
 
-public class CategoriesController extends Controller {
+public class UsersController extends Controller {
 
     @BodyParser.Of(BodyParser.Json.class)
-    public static Result getCategories() {
-        Response<List<Category>> response = new Response<List<Category>>();
+    public static Result getTeachers() {
+        Response<List<Teacher>> response = new Response<List<Teacher>>();
         
-        List<Category> categories = Category.find.all();
-        response.data = categories;
+        List<Teacher> teachers = Teacher.find.all();
+        response.data = teachers;
         return ok(Json.toJson(response));
     }
 
