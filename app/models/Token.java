@@ -30,7 +30,11 @@ public class Token extends Model {
 	private DateTime expirationDate;
 	
 	@OneToOne
-    Credentials owner;
+    private Credentials owner;
+    
+	public static Finder<Long,Token> find = new Finder<Long,Token>(
+        Long.class, Token.class
+    ); 
 	
 	public Long getKey() {
 		return key;
@@ -56,7 +60,7 @@ public class Token extends Model {
 		this.refresh = refresh;
 	}
 	
-	public DateTime getDate() {
+	public DateTime getExpirationDate() {
 		return expirationDate;
 	}
 

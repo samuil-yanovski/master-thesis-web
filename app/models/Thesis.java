@@ -35,6 +35,10 @@ public class Thesis extends Model {
 	@OneToOne
 	private Student graduate;
 	
+	public static Finder<Long,Thesis> find = new Finder<Long,Thesis>(
+        Long.class, Thesis.class
+    ); 
+	
 	public Long getKey() {
 		return key;
 	}

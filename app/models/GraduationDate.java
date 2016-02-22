@@ -24,6 +24,10 @@ public class GraduationDate extends Model {
 	@Required
 	private DateTime day;
 	
+	public static Finder<Long,GraduationDate> find = new Finder<Long,GraduationDate>(
+        Long.class, GraduationDate.class
+    ); 
+	
 	public Long getKey() {
 		return key;
 	}

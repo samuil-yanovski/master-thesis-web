@@ -44,11 +44,15 @@ public class Credentials extends Model {
 	
     @Basic
 	@ManyToMany(cascade=CascadeType.ALL)
-    List<Event> events;
+    private List<Event> events;
     
     @Basic
 	@ManyToOne(cascade=CascadeType.ALL)
 	private List<Device> devices;
+	
+	public static Finder<Long,Credentials> find = new Finder<Long,Credentials>(
+        Long.class, Credentials.class
+    ); 
 	
 	public Long getKey() {
 		return key;

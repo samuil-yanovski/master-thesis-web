@@ -11,4 +11,12 @@ GET     /check               controllers.LoginController.check()
 
 GET     /               controllers.Application.index()
 
+POST    /login               controllers.LoginController.login()
+POST    /register               controllers.LoginController.register()
 
+# CRUD Controllers and REST API
+#->     /                play.crud.Routes
+
+
+# REST API
+#->     /api             play.rest.Routes
