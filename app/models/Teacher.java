@@ -11,11 +11,10 @@ import javax.persistence.ManyToOne;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
-import play.utils.dao.BasicModel;
 
 @Entity
 @SuppressWarnings("serial")
-public class Teacher extends Model implements BasicModel<Long> {
+public class Teacher extends Model {
 
 	@Id
 	private Long key;

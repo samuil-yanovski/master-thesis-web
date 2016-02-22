@@ -1,23 +1,28 @@
 package models;
 
+import com.avaje.ebean.annotation.Encrypted;
+
 import java.util.List;
 
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.ManyToOne;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
-import play.utils.dao.BasicModel;
-import com.avaje.ebean.annotation.Encrypted; 
 
 @Entity
 @SuppressWarnings("serial")
-public class Credentials extends Model implements BasicModel<Long> {
+public class Credentials extends Model {
+
+	public static Finder<Long, Credentials> find = new Finder<Long,Credentials>(Long.class, Credentials.class);
+
+
+
 
 	@Id
 	private Long key;

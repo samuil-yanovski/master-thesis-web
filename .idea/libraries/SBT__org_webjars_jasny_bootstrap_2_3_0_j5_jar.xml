@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="SBT: org.webjars:jasny-bootstrap:2.3.0-j5:jar">
-    <CLASSES>
-      <root url="jar://$USER_HOME$/.ivy2/cache/org.webjars/jasny-bootstrap/jars/jasny-bootstrap-2.3.0-j5.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

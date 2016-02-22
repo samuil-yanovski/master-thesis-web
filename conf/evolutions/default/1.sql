@@ -37,14 +37,14 @@ create table device (
 create table event (
   key                       bigint not null,
   name                      varchar(255),
-  date                      timestamp,
+  day                       timestamp,
   constraint pk_event primary key (key))
 ;
 
 create table graduation_date (
   key                       bigint not null,
   name                      varchar(255),
-  date                      timestamp,
+  day                       timestamp,
   constraint pk_graduation_date primary key (key))
 ;
 

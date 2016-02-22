@@ -1,7 +1,6 @@
 package models;
 
 import org.joda.time.DateTime;
-import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
@@ -10,11 +9,10 @@ import javax.persistence.OneToOne;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
-import play.utils.dao.BasicModel;
 
 @Entity
 @SuppressWarnings("serial")
-public class Token extends Model implements BasicModel<Long> {
+public class Token extends Model {
 
 	@Id
 	private Long key;

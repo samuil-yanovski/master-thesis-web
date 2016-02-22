@@ -1,22 +1,17 @@
 package models;
 
-import org.joda.time.DateTime;
-import java.util.List;
-
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
-import play.utils.dao.BasicModel;
 
 @Entity
 @SuppressWarnings("serial")
-public class Device extends Model implements BasicModel<Long> {
+public class Device extends Model {
 
 	@Id
 	private Long key;

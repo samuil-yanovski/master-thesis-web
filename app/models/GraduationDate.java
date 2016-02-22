@@ -8,11 +8,10 @@ import javax.persistence.Id;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
-import play.utils.dao.BasicModel;
 
 @Entity
 @SuppressWarnings("serial")
-public class GraduationDate extends Model implements BasicModel<Long> {
+public class GraduationDate extends Model {
 
 	@Id
 	private Long key;
@@ -23,7 +22,7 @@ public class GraduationDate extends Model implements BasicModel<Long> {
 	
 	@Basic
 	@Required
-	private DateTime date;
+	private DateTime day;
 	
 	public Long getKey() {
 		return key;
@@ -41,12 +40,12 @@ public class GraduationDate extends Model implements BasicModel<Long> {
 		this.name = name;
 	}
 	
-	public DateTime getDate() {
-		return date;
+	public DateTime getDay() {
+		return day;
 	}
 
-	public void setDate(DateTime date) {
-		this.date = date;
+	public void setDay(DateTime day) {
+		this.day = day;
 	}
 	
 	@Override

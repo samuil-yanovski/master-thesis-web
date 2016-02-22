@@ -7,11 +7,10 @@ import javax.persistence.OneToOne;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
-import play.utils.dao.BasicModel;
 
 @Entity
 @SuppressWarnings("serial")
-public class Thesis extends Model implements BasicModel<Long> {
+public class Thesis extends Model {
 
 	@Id
 	private Long key;

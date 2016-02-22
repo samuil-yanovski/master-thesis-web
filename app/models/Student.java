@@ -4,15 +4,13 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import javax.persistence.CascadeType;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
-import play.utils.dao.BasicModel;
 
 @Entity
 @SuppressWarnings("serial")
-public class Student extends Model implements BasicModel<Long> {
+public class Student extends Model {
 
 	@Id
 	private Long key;

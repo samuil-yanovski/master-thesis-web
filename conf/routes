@@ -4,9 +4,11 @@
 
 # Home page
 # Home page
-GET     /               controllers.Application.index()
-# CRUD Controllers and REST API
-->     /                play.crud.Routes
 
-# REST API
-#->     /api             play.rest.Routes
+
+POST    /login               controllers.LoginController.login()
+GET     /check               controllers.LoginController.check()
+
+GET     /               controllers.Application.index()
+
+
