@@ -14,15 +14,11 @@ import javax.persistence.ManyToOne;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @SuppressWarnings("serial")
 public class Credentials extends Model {
-
-	public static Finder<Long, Credentials> find = new Finder<Long,Credentials>(Long.class, Credentials.class);
-
-
-
 
 	@Id
 	private Long key;
@@ -44,10 +40,12 @@ public class Credentials extends Model {
 	
     @Basic
 	@ManyToMany(cascade=CascadeType.ALL)
+	@JsonIgnore
     private List<Event> events;
     
     @Basic
 	@ManyToOne(cascade=CascadeType.ALL)
+	@JsonIgnore
 	private List<Device> devices;
 	
 	public static Finder<Long,Credentials> find = new Finder<Long,Credentials>(

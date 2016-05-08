@@ -7,6 +7,7 @@ import javax.persistence.OneToOne;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @SuppressWarnings("serial")
@@ -24,7 +25,11 @@ public class Thesis extends Model {
 	private String description;
 	
 	@Basic
+	private boolean approved = true;
+	
+	@Basic
 	@OneToOne
+	@JsonIgnore
 	private Category category;
 	
 	@Basic
@@ -61,6 +66,14 @@ public class Thesis extends Model {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	
+	public boolean getApproved() {
+		return approved;
+	}
+
+	public void setApproved(boolean approved) {
+		this.approved = approved;
 	}
 	
 	public Category getCategory() {

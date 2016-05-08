@@ -11,6 +11,7 @@ import javax.persistence.ManyToOne;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @SuppressWarnings("serial")
@@ -32,11 +33,17 @@ public class Teacher extends Model {
 	
 	@Basic
 	@OneToOne
+	@JsonIgnore
 	private Credentials credentials;
 	
 	@Basic
 	@ManyToOne(cascade=CascadeType.ALL)
+	@JsonIgnore
 	private List<Thesis> theses;
+	
+	@Basic
+	@ManyToOne(cascade=CascadeType.ALL)
+	private List<Interest> interests;
 	
 	public static Finder<Long,Teacher> find = new Finder<Long,Teacher>(
         Long.class, Teacher.class
@@ -88,6 +95,14 @@ public class Teacher extends Model {
 
 	public void setTheses(List<Thesis> theses) {
 		this.theses = theses;
+	}
+	
+	public List<Interest> getInterests() {
+		return interests;
+	}
+
+	public void setInterests(List<Interest> interests) {
+		this.interests = interests;
 	}
 	
 	@Override

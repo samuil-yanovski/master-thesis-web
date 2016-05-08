@@ -7,6 +7,7 @@ import javax.persistence.OneToOne;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @SuppressWarnings("serial")
@@ -32,10 +33,12 @@ public class Student extends Model {
 	
 	@Basic
 	@OneToOne
+	@JsonIgnore
 	private Credentials credentials;
 	
 	@Basic
 	@OneToOne
+	@JsonIgnore
 	private Thesis thesis;
 	
 	public static Finder<Long,Student> find = new Finder<Long,Student>(

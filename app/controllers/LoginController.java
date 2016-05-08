@@ -66,6 +66,7 @@ public class LoginController extends Controller {
         } else {
             String email = json.findPath("email").textValue();
             String password = json.findPath("password").textValue();
+            String name = json.findPath("name").textValue();
             String image = json.findPath("image").textValue();
             String type = json.findPath("type").textValue();
             
@@ -93,6 +94,7 @@ public class LoginController extends Controller {
                         Teacher teacher = new Teacher();
                         teacher.setAvatar(image);
                         teacher.setContacts(contacts);
+                        teacher.setName(name);
                         teacher.setCredentials(credentials);
                         try {
                             teacher.save();
@@ -105,6 +107,7 @@ public class LoginController extends Controller {
                     case STUDENT: {
                         Student student = new Student();
                         student.setAvatar(image);
+                        student.setName(name);
                         student.setContacts(contacts);
                         student.setCredentials(credentials);
                         try {

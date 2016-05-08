@@ -13,6 +13,7 @@ create table contacts (
   key                       bigint not null,
   skype                     varchar(255),
   phone                     varchar(255),
+  email                     varchar(255),
   constraint pk_contacts primary key (key))
 ;
 
@@ -37,7 +38,7 @@ create table device (
 create table event (
   key                       bigint not null,
   name                      varchar(255),
-  day                       timestamp,
+  date                      timestamp,
   constraint pk_event primary key (key))
 ;
 
@@ -72,6 +73,7 @@ create table thesis (
   key                       bigint not null,
   title                     varchar(255),
   description               varchar(255),
+  approved                  boolean,
   category_key              bigint,
   author_key                bigint,
   graduate_key              bigint,
@@ -107,7 +109,7 @@ create sequence credentials_seq;
 
 create sequence device_seq;
 
-create sequence event_seq;
+create sequence task_id_seq;
 
 create sequence graduation_date_seq;
 
@@ -184,7 +186,7 @@ drop sequence if exists credentials_seq;
 
 drop sequence if exists device_seq;
 
-drop sequence if exists event_seq;
+drop sequence if exists task_id_seq;
 
 drop sequence if exists graduation_date_seq;
 

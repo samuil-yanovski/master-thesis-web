@@ -6,13 +6,29 @@
 # Home page
 
 
-POST    /login               controllers.LoginController.login()
-GET     /check               controllers.LoginController.check()
+GET      /check               controllers.LoginController.check()
 
-GET     /               controllers.Application.index()
+GET      /               controllers.Application.index()
 
-POST    /login               controllers.LoginController.login()
-POST    /register               controllers.LoginController.register()
+GET      /teachers               controllers.UsersController.getTeachers()
+GET      /students               controllers.UsersController.getStudents()
+POST      /teachers               controllers.UsersController.updateTeacher()
+POST      /students               controllers.UsersController.updateStudent()
+
+POST     /login               controllers.LoginController.login()
+POST     /register               controllers.LoginController.register()
+
+GET      /categories               controllers.CategoriesController.getCategories()
+PUT      /categories               controllers.CategoriesController.create()
+
+PUT      /thesis               controllers.ThesesController.addThesis()
+PUT      /thesis/proposal      controllers.ThesesController.createProposal()
+POST     /thesis/:id/approve               controllers.ThesesController.approve(id: Long)
+POST     /thesis/:id/decline               controllers.ThesesController.decline(id: Long)
+
+PUT      /interests               controllers.InterestsController.create()
+POST     /interests/:id               controllers.InterestsController.update(id: Long)
+DELETE   /interests/:id               controllers.InterestsController.delete(id: Long)
 
 # CRUD Controllers and REST API
 #->     /                play.crud.Routes
