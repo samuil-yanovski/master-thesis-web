@@ -20,9 +20,11 @@ create table contacts (
 create table credentials (
   key                       bigint not null,
   email                     varchar(255),
-  password                  bytea,
+  password                  varchar(255),
   google_plus_id            varchar(255),
   facebook_id               varchar(255),
+  student_key               bigint,
+  teacher_key               bigint,
   constraint uq_credentials_email unique (email),
   constraint pk_credentials primary key (key))
 ;
@@ -47,6 +49,13 @@ create table graduation_date (
   name                      varchar(255),
   day                       timestamp,
   constraint pk_graduation_date primary key (key))
+;
+
+create table interest (
+  key                       bigint not null,
+  name                      varchar(255),
+  teacher_key               bigint,
+  constraint pk_interest primary key (key))
 ;
 
 create table student (
@@ -113,6 +122,8 @@ create sequence task_id_seq;
 
 create sequence graduation_date_seq;
 
+create sequence interest_seq;
+
 create sequence student_seq;
 
 create sequence teacher_seq;
@@ -121,26 +132,32 @@ create sequence thesis_seq;
 
 create sequence token_seq;
 
-alter table device add constraint fk_device_owner_1 foreign key (owner_key) references credentials (key);
-create index ix_device_owner_1 on device (owner_key);
-alter table student add constraint fk_student_contacts_2 foreign key (contacts_key) references contacts (key);
-create index ix_student_contacts_2 on student (contacts_key);
-alter table student add constraint fk_student_credentials_3 foreign key (credentials_key) references credentials (key);
-create index ix_student_credentials_3 on student (credentials_key);
-alter table student add constraint fk_student_thesis_4 foreign key (thesis_key) references thesis (key);
-create index ix_student_thesis_4 on student (thesis_key);
-alter table teacher add constraint fk_teacher_contacts_5 foreign key (contacts_key) references contacts (key);
-create index ix_teacher_contacts_5 on teacher (contacts_key);
-alter table teacher add constraint fk_teacher_credentials_6 foreign key (credentials_key) references credentials (key);
-create index ix_teacher_credentials_6 on teacher (credentials_key);
-alter table thesis add constraint fk_thesis_category_7 foreign key (category_key) references category (key);
-create index ix_thesis_category_7 on thesis (category_key);
-alter table thesis add constraint fk_thesis_author_8 foreign key (author_key) references teacher (key);
-create index ix_thesis_author_8 on thesis (author_key);
-alter table thesis add constraint fk_thesis_graduate_9 foreign key (graduate_key) references student (key);
-create index ix_thesis_graduate_9 on thesis (graduate_key);
-alter table token add constraint fk_token_owner_10 foreign key (owner_key) references credentials (key);
-create index ix_token_owner_10 on token (owner_key);
+alter table credentials add constraint fk_credentials_student_1 foreign key (student_key) references student (key);
+create index ix_credentials_student_1 on credentials (student_key);
+alter table credentials add constraint fk_credentials_teacher_2 foreign key (teacher_key) references teacher (key);
+create index ix_credentials_teacher_2 on credentials (teacher_key);
+alter table device add constraint fk_device_owner_3 foreign key (owner_key) references credentials (key);
+create index ix_device_owner_3 on device (owner_key);
+alter table interest add constraint fk_interest_teacher_4 foreign key (teacher_key) references teacher (key);
+create index ix_interest_teacher_4 on interest (teacher_key);
+alter table student add constraint fk_student_contacts_5 foreign key (contacts_key) references contacts (key);
+create index ix_student_contacts_5 on student (contacts_key);
+alter table student add constraint fk_student_credentials_6 foreign key (credentials_key) references credentials (key);
+create index ix_student_credentials_6 on student (credentials_key);
+alter table student add constraint fk_student_thesis_7 foreign key (thesis_key) references thesis (key);
+create index ix_student_thesis_7 on student (thesis_key);
+alter table teacher add constraint fk_teacher_contacts_8 foreign key (contacts_key) references contacts (key);
+create index ix_teacher_contacts_8 on teacher (contacts_key);
+alter table teacher add constraint fk_teacher_credentials_9 foreign key (credentials_key) references credentials (key);
+create index ix_teacher_credentials_9 on teacher (credentials_key);
+alter table thesis add constraint fk_thesis_category_10 foreign key (category_key) references category (key);
+create index ix_thesis_category_10 on thesis (category_key);
+alter table thesis add constraint fk_thesis_author_11 foreign key (author_key) references teacher (key);
+create index ix_thesis_author_11 on thesis (author_key);
+alter table thesis add constraint fk_thesis_graduate_12 foreign key (graduate_key) references student (key);
+create index ix_thesis_graduate_12 on thesis (graduate_key);
+alter table token add constraint fk_token_owner_13 foreign key (owner_key) references credentials (key);
+create index ix_token_owner_13 on token (owner_key);
 
 
 
@@ -170,6 +187,8 @@ drop table if exists event_credentials cascade;
 
 drop table if exists graduation_date cascade;
 
+drop table if exists interest cascade;
+
 drop table if exists student cascade;
 
 drop table if exists teacher cascade;
@@ -189,6 +208,8 @@ drop sequence if exists device_seq;
 drop sequence if exists task_id_seq;
 
 drop sequence if exists graduation_date_seq;
+
+drop sequence if exists interest_seq;
 
 drop sequence if exists student_seq;
 

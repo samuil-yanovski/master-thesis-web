@@ -98,6 +98,7 @@ public class LoginController extends Controller {
                         teacher.setCredentials(credentials);
                         try {
                             teacher.save();
+                            credentials.setTeacher(teacher);
                             return ok(Json.toJson(response));
                         } catch (PersistenceException e) {
                             response.message = "Invalid or duplicate user data";
@@ -112,6 +113,7 @@ public class LoginController extends Controller {
                         student.setCredentials(credentials);
                         try {
                             student.save();
+                            credentials.setStudent(student);
                             return ok(Json.toJson(response));
                         } catch (PersistenceException e) {
                             response.message = "Invalid or duplicate user data";
@@ -144,6 +146,17 @@ public class LoginController extends Controller {
                                 .eq("email", email)
                                 .eq("password", password)
                                 .findUnique();
+                Student student = Student.find.where()
+                                .eq("credentials", credentials)
+                                .findUnique();
+                if (null != student) {
+                    credentials.setStudent(student);
+                } else {
+                    Teacher teacher = Teacher.find.where()
+                                .eq("credentials", credentials)
+                                .findUnique();
+                    credentials.setTeacher(teacher);
+                }
                 
                 if (null == credentials) {
                     response.message = "Invalid [email] or [password]";

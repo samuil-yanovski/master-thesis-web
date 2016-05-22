@@ -15,6 +15,7 @@ import javax.persistence.ManyToOne;
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import javax.persistence.OneToOne;
 
 @Entity
 @SuppressWarnings("serial")
@@ -29,7 +30,7 @@ public class Credentials extends Model {
 	private String email;
 	
 	@Basic
-	@Encrypted(dbEncryption=false)
+	@JsonIgnore
 	private String password;
 	
 	@Basic
@@ -37,6 +38,12 @@ public class Credentials extends Model {
 	
 	@Basic
 	private String facebookId;
+	
+	@OneToOne
+    private Student student;
+	
+	@OneToOne
+    private Teacher teacher;
 	
     @Basic
 	@ManyToMany(cascade=CascadeType.ALL)
@@ -91,6 +98,22 @@ public class Credentials extends Model {
 
 	public void setFacebookId(String facebookId) {
 		this.facebookId = facebookId;
+	}
+	
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+	
+	public Teacher getTeacher() {
+		return teacher;
+	}
+
+	public void setTeacher(Teacher teacher) {
+		this.teacher = teacher;
 	}
 	
 	public List<Event> getEvents() {

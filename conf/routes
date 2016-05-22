@@ -21,14 +21,19 @@ POST     /register               controllers.LoginController.register()
 GET      /categories               controllers.CategoriesController.getCategories()
 PUT      /categories               controllers.CategoriesController.create()
 
-PUT      /thesis               controllers.ThesesController.addThesis()
-PUT      /thesis/proposal      controllers.ThesesController.createProposal()
-POST     /thesis/:id/approve               controllers.ThesesController.approve(id: Long)
-POST     /thesis/:id/decline               controllers.ThesesController.decline(id: Long)
+PUT      /theses               controllers.ThesesController.addThesis()
+PUT      /theses/proposals      controllers.ThesesController.createProposal()
+POST     /theses/:id/approve               controllers.ThesesController.approve(id: Long)
+POST     /theses/:id/decline               controllers.ThesesController.decline(id: Long)
 
 PUT      /interests               controllers.InterestsController.create()
 POST     /interests/:id               controllers.InterestsController.update(id: Long)
 DELETE   /interests/:id               controllers.InterestsController.delete(id: Long)
+
+GET      /dates               controllers.DatesController.getGraduationDates()
+PUT      /dates               controllers.DatesController.createGraduationDate()
+POST     /dates/:id               controllers.DatesController.updateGraduationDate(id: Long)
+DELETE   /dates/:id               controllers.DatesController.deleteGraduationDate(id: Long)
 
 # CRUD Controllers and REST API
 #->     /                play.crud.Routes
