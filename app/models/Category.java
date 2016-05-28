@@ -6,7 +6,7 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
@@ -23,7 +23,7 @@ public class Category extends Model {
 	private String name;
 	
 	@Basic
-	@ManyToOne(cascade=CascadeType.ALL)
+	@OneToMany(cascade=CascadeType.ALL)
 	private List<Thesis> theses;
 	
 	public static Finder<Long,Category> find = new Finder<Long,Category>(
