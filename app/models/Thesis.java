@@ -29,7 +29,6 @@ public class Thesis extends Model {
 	
 	@Basic
 	@OneToOne
-	@JsonIgnore
 	private Category category;
 	
 	@Basic
