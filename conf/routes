@@ -21,6 +21,7 @@ POST     /register               controllers.LoginController.register()
 GET      /categories               controllers.CategoriesController.getCategories()
 PUT      /categories               controllers.CategoriesController.create()
 
+GET      /theses               controllers.ThesesController.getTheses()
 PUT      /theses               controllers.ThesesController.addThesis()
 PUT      /theses/proposals      controllers.ThesesController.createProposal()
 POST     /theses/:id/approve               controllers.ThesesController.approve(id: Long)
