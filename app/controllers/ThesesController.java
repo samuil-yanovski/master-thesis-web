@@ -18,6 +18,15 @@ public class ThesesController extends Controller {
     private static Credentials getUserFromContext() {
         return (Credentials) Http.Context.current().args.get("user");
     }
+    
+    @BodyParser.Of(BodyParser.Json.class)
+    public static Result getTheses() {
+        Response<List<Thesis>> response = new Response<List<Thesis>>();
+        
+        List<Thesis> theses = Thesis.find.all();
+        response.data = theses;
+        return ok(Json.toJson(response));
+    }
 
     @With(Authenticated.class)
     @BodyParser.Of(BodyParser.Json.class)

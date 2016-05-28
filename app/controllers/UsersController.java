@@ -9,6 +9,7 @@ import java.util.List;
 import play.libs.Json;
 import http.Response;
 import com.fasterxml.jackson.databind.JsonNode;
+import http.Authenticated;
 
 public class UsersController extends Controller {
         
@@ -34,6 +35,7 @@ public class UsersController extends Controller {
         return ok(Json.toJson(response));
     }
     
+    @With(Authenticated.class)
     @BodyParser.Of(BodyParser.Json.class)
     public static Result updateTeacher() {
         Response<Teacher> response = new Response<Teacher>();
@@ -69,6 +71,7 @@ public class UsersController extends Controller {
         }
     }
     
+    @With(Authenticated.class)
     @BodyParser.Of(BodyParser.Json.class)
     public static Result updateStudent() {
         Response<Student> response = new Response<Student>();
@@ -82,7 +85,7 @@ public class UsersController extends Controller {
             
                 Credentials credentials = getUserFromContext();
                 Student student = Student.find.where()
-                                .eq("credentials", credentials)
+                                .eq("credentials.key", credentials.getKey())
                                 .findUnique();
                 
                 if (null == student) {
